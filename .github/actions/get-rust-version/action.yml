@@ -14,7 +14,7 @@ runs:
         fi
 
     - name: Install toolchain
-      description: Install the Rust toolchain - expects a rust-toolchain.toml file in the repository
+      #: Install the Rust toolchain - expects a rust-toolchain.toml file in the repository
       uses: actions-rs/toolchain@v1
 
     - name: get rust version
