@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]  # Define the operating systems for the matrix
+        os: [ubuntu-latest, windows-latest, macos-13, macos-latest]  # Define the operating systems for the matrix
   
     steps:
       - name: Checkout repository
