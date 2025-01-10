@@ -13,7 +13,17 @@ jobs:
       - name: Get Rust Version
         id: get-rust-version
         run: |
-          echo "rustup_version=$(rustup --version)" >> $GITHUB_STEP_SUMMARY
-          echo "cargo_version=$(cargo --version)" >> $GITHUB_STEP_SUMMARY
-          echo "rustc_version=$(rustc --version)" >> $GITHUB_STEP_SUMMARY
+          {
 
+            rustup_version=$(rustup --version)
+            cargo_version=$(cargo --version)
+            rustc_version=$(rustc --version)
+
+            echo "### :crab: Rust Versions"
+            echo "| Arg                 | Value |"
+            echo "| ------------------- | ----- |"
+            echo "| Rustup              | $rustup_version |"
+            echo "| Cargo               | $cargo_version |"
+            echo "| Rustc               | $rustc_version |"
+          } >> $GITHUB_STEP_SUMMARY
+           
