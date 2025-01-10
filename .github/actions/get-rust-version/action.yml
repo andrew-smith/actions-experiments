@@ -6,6 +6,7 @@ runs:
   steps:
 
     - name: Check for rust-toolchain.toml
+      shell: bash
       run: |
         if [ ! -f rust-toolchain.tomlFAIL ]; then
           echo "No rust-toolchain.toml file found in the repository"
