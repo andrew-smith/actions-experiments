@@ -5,6 +5,17 @@ runs:
   using: composite
   steps:
 
+    - name: Check for rust-toolchain.toml
+      run: |
+        if [ ! -f rust-toolchain.tomlFAIL ]; then
+          echo "No rust-toolchain.toml file found in the repository"
+          exit 1
+        fi
+
+    - name: Install toolchain
+      description: Install the Rust toolchain - expects a rust-toolchain.toml file in the repository
+      uses: actions-rs/toolchain@v1
+
     - name: get rust version
       shell: bash
       run: |
