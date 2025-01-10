@@ -1,0 +1,16 @@
+name: Get Rust Version
+id: get-rust-version
+run: |
+  {
+
+    rustup_version=$(rustup --version)
+    cargo_version=$(cargo --version)
+    rustc_version=$(rustc --version)
+
+    echo "### Rust Versions :crab:"
+    echo "| Tool                | Version |"
+    echo "| ------------------- | ------- |"
+    echo "| rustup              | $rustup_version |"
+    echo "| cargo               | $cargo_version |"
+    echo "| rustc               | $rustc_version |"
+  } >> $GITHUB_STEP_SUMMARY
