@@ -20,10 +20,9 @@ jobs:
             rustc_version=$(rustc --version)
 
             echo "### :crab: Rust Versions"
-            echo "| Arg                 | Value |"
-            echo "| ------------------- | ----- |"
+            echo "| Tool                | Version |"
+            echo "| ------------------- | ------- |"
             echo "| Rustup              | $rustup_version |"
             echo "| Cargo               | $cargo_version |"
             echo "| Rustc               | $rustc_version |"
           } >> $GITHUB_STEP_SUMMARY
-           
