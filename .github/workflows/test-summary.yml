@@ -22,7 +22,7 @@ jobs:
             echo "### Rust Versions :crab:"
             echo "| Tool                | Version |"
             echo "| ------------------- | ------- |"
-            echo "| `rustup`            | $rustup_version |"
-            echo "| `cargo`             | $cargo_version  |"
-            echo "| `rustc`             | $rustc_version  |"
+            echo "| rustup              | $rustup_version |"
+            echo "| cargo               | $cargo_version |"
+            echo "| rustc               | $rustc_version |"
           } >> $GITHUB_STEP_SUMMARY
