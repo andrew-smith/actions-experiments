@@ -6,6 +6,7 @@ runs:
   steps:
 
     - name: get rust version
+      shell: bash
       run: |
         {
 
